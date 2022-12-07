@@ -7,7 +7,7 @@ let ball_y = 0
 let ball_dx = 0
 let ball_dy = 0
 let in_game = false
-// 往左
+// Movimiento a la izquierda
 input.onButtonPressed(Button.A, function () {
     if (bar_x > 0) {
         led.unplot(bar_x + 1, 4)
@@ -15,7 +15,7 @@ input.onButtonPressed(Button.A, function () {
         led.plot(bar_x, 4)
     }
 })
-// 往右
+// Movimiento a la derecha
 input.onButtonPressed(Button.B, function () {
     if (bar_x < 3) {
         led.unplot(bar_x, 4)
@@ -23,6 +23,9 @@ input.onButtonPressed(Button.B, function () {
         led.plot(bar_x + 1, 4)
     }
 })
+/**
+ * Se define al inicio del ciclo todas las variables
+ */
 basic.forever(function () {
     point = 0
     interval = 500
